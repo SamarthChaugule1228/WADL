@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+
+<h2>Submitted Data</h2>
+
+<div id="result"></div>
+
+<script>
+    let user = JSON.parse(localStorage.getItem("user"));
+    
+    if (user) {
+        let output = `
+            <strong>Name:</strong> ${user.name} <br><br>
+            <strong>Email:</strong> ${user.email} <br><br>
+            <strong>Password:</strong> ${user.password}
+        `;
+        document.getElementById("result").innerHTML = output;
+    } else {
+        document.getElementById("result").innerHTML = "No user data found! Please register first.";
+    }
+</script>
+
+</body>
+</html>
