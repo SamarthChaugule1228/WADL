@@ -34,21 +34,19 @@ Assignment3-B/
 
 ### 1. Install Dependencies
 
-```
+```bash
 npm install express mongoose body-parser ejs
 ```
 
 ### 2. Start MongoDB
 
-Make sure MongoDB server is running:
-
-```
+```bash
 mongod
 ```
 
 ### 3. Run Application
 
-```
+```bash
 node server.js
 ```
 
@@ -64,7 +62,7 @@ http://localhost:8080
 
 ## 🔥 API Endpoints & Operations
 
-### ✅ (a, b, c) Create DB, Collection & Insert 5 Songs
+### ✅ (a, b, c) Insert 5 Songs
 
 ```
 GET /insert
@@ -80,32 +78,29 @@ GET /songs
 
 ---
 
-### ✅ (e) List Songs by Music Director
+### ✅ (e) Songs by Music Director
 
 ```
 GET /director/:name
-Example:
-GET /director/Pritam
+Example: /director/Pritam
 ```
 
 ---
 
-### ✅ (f) List Songs by Director & Singer
+### ✅ (f) Director + Singer Filter
 
 ```
 GET /filter?director=NAME&singer=NAME
-Example:
-GET /filter?director=Pritam&singer=Arijit Singh
+Example: /filter?director=Pritam&singer=Arijit Singh
 ```
 
 ---
 
-### ✅ (g) Delete a Song
+### ✅ (g) Delete Song
 
 ```
 GET /delete/:songname
-Example:
-GET /delete/Tum%20Hi%20Ho
+Example: /delete/Tum%20Hi%20Ho
 ```
 
 ---
@@ -116,9 +111,9 @@ GET /delete/Tum%20Hi%20Ho
 POST /add
 ```
 
-**Body (JSON):**
+**Body:**
 
-```
+```json
 {
   "songname": "Apna Bana Le",
   "film": "Bhediya",
@@ -129,12 +124,11 @@ POST /add
 
 ---
 
-### ✅ (i) Songs by Singer from Specific Film
+### ✅ (i) Singer + Film Filter
 
 ```
 GET /songfilter?singer=NAME&film=NAME
-Example:
-GET /songfilter?singer=Arijit Singh&film=ADHM
+Example: /songfilter?singer=Arijit Singh&film=ADHM
 ```
 
 ---
@@ -143,52 +137,39 @@ GET /songfilter?singer=Arijit Singh&film=ADHM
 
 ```
 GET /update/:songname
-Example:
-GET /update/Kesariya
+Example: /update/Kesariya
 ```
 
 ---
 
-### ✅ (k) Display Data in Tabular Format
+### ✅ (k) Final Table Display
 
 ```
 GET /songs
 ```
 
-Displays all records in an HTML table using EJS.
-
 ---
 
 ## 📊 Features
 
-* Automatic database and collection creation
+* Automatic DB & collection creation
 * Insert multiple records
-* Filter data using query parameters
-* Update and delete operations
-* Server-side HTML rendering using EJS
-* Tabular display of records
-
----
-
-## 🎯 Output
-
-* All data is displayed in **HTML table format**
-* Filters and queries return **dynamic table results**
-* CRUD operations are fully functional
+* Filtering using query params
+* Update & delete operations
+* Server-side rendering using EJS
+* HTML table display
 
 ---
 
 ## 🧠 Viva Points
 
-* **MongoDB** automatically creates database & collection
-* **Mongoose** is used as ODM
-* **EJS** is used for server-side rendering
-* **Express.js** handles routing and APIs
+* MongoDB creates DB automatically
+* Mongoose is ODM
+* EJS for server-side rendering
+* Express handles routing
 
 ---
 
 ## ⚡ Conclusion
 
-The project successfully demonstrates CRUD operations using Node.js, Express, and MongoDB, along with dynamic data rendering using EJS templates.
-
----
+This project demonstrates full CRUD operations using **Node.js, Express, and MongoDB** with dynamic HTML rendering using **EJS**.
