@@ -1,0 +1,194 @@
+# 🎵 Music Management System (W-5 Assignment)
+
+## 📌 Objective
+
+To perform CRUD operations using **Node.js, Express.js, and MongoDB** and display data in tabular format using **EJS**.
+
+---
+
+## 🛠️ Technologies Used
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* EJS (Template Engine)
+
+---
+
+## 📁 Project Structure
+
+```
+Assignment3-B/
+│── models/
+│     └── song.js
+│── views/
+│     └── table.ejs
+│── server.js
+│── package.json
+```
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Install Dependencies
+
+```
+npm install express mongoose body-parser ejs
+```
+
+### 2. Start MongoDB
+
+Make sure MongoDB server is running:
+
+```
+mongod
+```
+
+### 3. Run Application
+
+```
+node server.js
+```
+
+---
+
+## 🌐 Base URL
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🔥 API Endpoints & Operations
+
+### ✅ (a, b, c) Create DB, Collection & Insert 5 Songs
+
+```
+GET /insert
+```
+
+---
+
+### ✅ (d) Display All Songs (Table Format)
+
+```
+GET /songs
+```
+
+---
+
+### ✅ (e) List Songs by Music Director
+
+```
+GET /director/:name
+Example:
+GET /director/Pritam
+```
+
+---
+
+### ✅ (f) List Songs by Director & Singer
+
+```
+GET /filter?director=NAME&singer=NAME
+Example:
+GET /filter?director=Pritam&singer=Arijit Singh
+```
+
+---
+
+### ✅ (g) Delete a Song
+
+```
+GET /delete/:songname
+Example:
+GET /delete/Tum%20Hi%20Ho
+```
+
+---
+
+### ✅ (h) Add New Song
+
+```
+POST /add
+```
+
+**Body (JSON):**
+
+```
+{
+  "songname": "Apna Bana Le",
+  "film": "Bhediya",
+  "music_director": "Sachin-Jigar",
+  "singer": "Arijit Singh"
+}
+```
+
+---
+
+### ✅ (i) Songs by Singer from Specific Film
+
+```
+GET /songfilter?singer=NAME&film=NAME
+Example:
+GET /songfilter?singer=Arijit Singh&film=ADHM
+```
+
+---
+
+### ✅ (j) Update Actor & Actress
+
+```
+GET /update/:songname
+Example:
+GET /update/Kesariya
+```
+
+---
+
+### ✅ (k) Display Data in Tabular Format
+
+```
+GET /songs
+```
+
+Displays all records in an HTML table using EJS.
+
+---
+
+## 📊 Features
+
+* Automatic database and collection creation
+* Insert multiple records
+* Filter data using query parameters
+* Update and delete operations
+* Server-side HTML rendering using EJS
+* Tabular display of records
+
+---
+
+## 🎯 Output
+
+* All data is displayed in **HTML table format**
+* Filters and queries return **dynamic table results**
+* CRUD operations are fully functional
+
+---
+
+## 🧠 Viva Points
+
+* **MongoDB** automatically creates database & collection
+* **Mongoose** is used as ODM
+* **EJS** is used for server-side rendering
+* **Express.js** handles routing and APIs
+
+---
+
+## ⚡ Conclusion
+
+The project successfully demonstrates CRUD operations using Node.js, Express, and MongoDB, along with dynamic data rendering using EJS templates.
+
+---
