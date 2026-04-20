@@ -3,101 +3,172 @@
 <head>
     <title>jQuery Mobile Website</title>
 
-    <!-- Viewport for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CDN Links -->
     <!-- jQuery Mobile CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-    <!-- jQuery JS -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- jQuery Mobile JS -->
+    <!-- jQuery Mobile -->
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .custom-popup {
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Page 1 -->
-<div data-role="page" id="home">
+<!-- ================= HOME PAGE ================= -->
+<div data-role="page" id="Home">
 
-    <!-- Header -->
-    <div data-role="header" data-theme="b">
-        <h1>My Mobile Site</h1>
+    <!-- Header + Navbar -->
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Employee Management</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Home" class="ui-btn-active" data-icon="home">Home</a></li>
+                <li><a href="#About" data-icon="info" data-transition="fade">About</a></li>
+                <li><a href="#Grades" data-icon="star" data-transition="pop">Grades</a></li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Navbar -->
-    <div data-role="navbar">
-        <ul>
-            <li><a href="#home" class="ui-btn-active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Content -->
+    <div role="main" class="ui-content center-text">
+
+        <div class="card">
+            <h2>Welcome</h2>
+            <p>Simple jQuery Mobile Website</p>
+        </div>
+
+        <!-- Popup Button -->
+        <a href="#mypopup" data-rel="popup" data-role="button" data-theme="b">Open Popup</a>
+
+        <!-- Popup -->
+        <div id="mypopup" data-role="popup" class="custom-popup" data-theme="b">
+            <h3>jQuery Popup</h3>
+            <p>This is a styled popup 😎</p>
+            <a href="#" data-rel="back" data-role="button">Close</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>@PICT All Reserved</h4>
+    </div>
+
+</div>
+
+<!-- ================= ABOUT PAGE ================= -->
+<div data-role="page" id="About">
+
+    <!-- SAME Header -->
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Employee Management</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Home" data-icon="home">Home</a></li>
+                <li><a href="#About" class="ui-btn-active" data-icon="info">About</a></li>
+                <li><a href="#Grades" data-icon="star">Grades</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div role="main" class="ui-content center-text">
+        <div class="card">
+            <h2>About Us</h2>
+            <p>This is a simple Employee Management System.</p>
+        </div>
+
+        <!-- Collapsible -->
+        <div data-role="collapsible">
+            <h3>More Info</h3>
+            <p>We manage employee data efficiently.</p>
+        </div>
+
+        <!-- Back Button -->
+        <a href="#" data-rel="back" data-role="button">Go Back</a>
+    </div>
+
+    <!-- SAME Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>@PICT All Reserved</h4>
+    </div>
+
+</div>
+
+<!-- ================= GRADES PAGE ================= -->
+<div data-role="page" id="Grades">
+
+    <!-- SAME Header -->
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Employee Management</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Home" data-icon="home">Home</a></li>
+                <li><a href="#About" data-icon="info">About</a></li>
+                <li><a href="#Grades" class="ui-btn-active" data-icon="star">Grades</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Content -->
     <div role="main" class="ui-content">
-        <h3>Welcome</h3>
-        <p>This is a simple jQuery Mobile website.</p>
 
-        <button id="btn">Click Me</button>
+        <h2 class="center-text">Employee Grades</h2>
+
+        <!-- Responsive Table -->
+        <table data-role="table" class="ui-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Samarth</td>
+                    <td>9.2</td>
+                </tr>
+                <tr>
+                    <td>Rutuja</td>
+                    <td>9.5</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
-    <!-- Footer -->
-    <div data-role="footer">
-        <h4>Footer Section</h4>
-    </div>
-
-</div>
-
-<!-- Page 2 -->
-<div data-role="page" id="about">
-
-    <div data-role="header" data-theme="b">
-        <h1>About</h1>
-    </div>
-
-    <div role="main" class="ui-content">
-        <p>This website is created using jQuery Mobile.</p>
-        <a href="#home" class="ui-btn">Go Back</a>
-    </div>
-
-</div>
-
-<!-- Page 3 -->
-<div data-role="page" id="contact">
-
-    <div data-role="header" data-theme="b">
-        <h1>Contact</h1>
-    </div>
-
-    <div role="main" class="ui-content">
-
-        <form>
-            <label>Name:</label>
-            <input type="text">
-
-            <label>Email:</label>
-            <input type="text">
-
-            <label>
-                <input type="checkbox"> Subscribe
-            </label>
-
-            <input type="submit" value="Submit">
-        </form>
-
-        <a href="#home" class="ui-btn">Go Back</a>
+    <!-- SAME Footer -->
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>@PICT All Reserved</h4>
     </div>
 
 </div>
-
-<script>
-    $("#btn").click(function(){
-        alert("Button Clicked!");
-    });
-</script>
 
 </body>
 </html>
